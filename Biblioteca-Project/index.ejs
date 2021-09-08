@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Alunos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        nav {
+            background-color: darkgray;
+        }
+
+        .container {
+            margin-top: 2.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top mb-3">
+            <a class="navbar-brand ml-sm-5" href="/">Biblioteca de Livros</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav m-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(Pagina Principal)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastrarLivros">Livros<span class="sr-only">(Cadastro de
+                                Livros)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/relatorioLivros">Relatório<span class="sr-only">(Relatório de
+                                Livros)</span></a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Relatorios
+                            <span class="sr-only">(DropDown Relatorios)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/relatorioLivros">Livros<span class="sr-only">(Pagina Produtos
+                                    Principal)</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/relatorioClientes">Clientes<span class="sr-only">(Pagina Produtos
+                                    Plantas)</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastrarClientes">Clientes<span class="sr-only">(Cadastro de
+                        Clientes)</span></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+    
+        <section class="fundo container-fluid mt-sm-3  mb-md-3">
+    
+            <div id="myCarousel" class="carousel slide m-auto w-sm-100 " data-ride="carousel" data-interval="3500"
+                data-keyboard="true">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner rounded-lg ">
+                    <div class="carousel-item active ">
+                        <img class="d-block w-100" src="img/img1.jpg" alt="Primeiro Slide">
+                        <div style="margin-bottom: 1%" class="carousel-caption d-none d-md-block text-body">
+                            <a href=""><button type="button" class="btn mb-4 btn-caroussel ">Nossa
+                                    Biblioteca</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100 " src="img/img2.jpg" alt="Segundo Slide">
+                        <div style="margin-bottom: 1%" class="carousel-caption d-none d-md-block text-body">
+                            <a href="/cadastrarLivros"><button type="button"
+                                    class="btn mb-4 btn-caroussel ">Cadastro Livros</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/img3.jpg" alt="Terceiro Slide">
+                        <div style="margin-bottom: 1%" class="carousel-caption d-none d-md-block text-body">
+                            <a href="/relatorioLivros"><button type="button" class="btn mb-4 btn-caroussel ">Livros</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/img4.jpg" alt="Quarto Slide">
+                        <div style="margin-bottom: 1%" class="carousel-caption d-none d-md-block text-body">
+                            <a href="/relatorioClientes"><button type="button" class="btn mb-4 btn-caroussel ">Clientes</button></a>
+                        </div>
+                    </div>
+    
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+    
+    
+        </section>
+    
+    </main>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

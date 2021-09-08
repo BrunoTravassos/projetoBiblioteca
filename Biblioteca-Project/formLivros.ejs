@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro Livros</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        nav {
+            background-color: darkgray;
+        }
+
+        .container {
+            margin-top: 2.6rem;
+        }
+
+        .htext {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top mb-3">
+            <a class="navbar-brand ml-sm-5" href="/">Biblioteca de Livros</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav m-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(Pagina Principal)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastrarLivros">Cadastro<span class="sr-only">(Cadastro de
+                                Livros)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/relatorioLivros">Relatório<span class="sr-only">(Relatório de
+                                Livros)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastrarClientes">Clientes<span class="sr-only">(Cadastro de
+                                Clientes)</span></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h1 class="htext mt-5">Cadastrar Livros</h1>
+                <form action="/cadastrarLivros" method="post">
+                    <div class="form-group">
+                        <label for="nome_Livro">Nome do Livro</label>
+                        <input class="form-control" onblur="validaNome(value)" type="text" id="nome_Livro" name="nome_Livro"
+                            placeholder="Nome do Livro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num_Edicao">Numero da Edição</label>
+                        <input class="form-control" onblur="validaEdicao(value)" type="text" id="num_Edicao" name="num_Edicao"
+                            placeholder="Numero da Edição" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto do Livro</label>
+                        <select class="form-control" name="assunto" id="assunto" required>Assunto
+                            <option value="" selected>Escolha</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Policial">Policial</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Informatica">Informática</option>
+                            <option value="Culinaria">Culinária</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editora">Editora</label>
+                        <input class="form-control" onblur="validaEditora(value)" type="text" id="editora" name="editora" placeholder="Editora"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome_Autor">Nome Autor(a)</label>
+                        <input class="form-control" onblur="validaNome_Autor(value)" type="text" id="nome_Autor" name="nome_Autor" placeholder="Nome do Autor(a)"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <input class="form-control" onblur="validaISBN(value)" type="number" id="isbn" name="isbn" placeholder="ISBN"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantidade_Estoque">Quantidade Estoque</label>
+                        <input class="form-control" onblur="validaEstoque(value)" type="number" id="quantidade_Estoque" name="quantidade_Estoque" placeholder="Quantidade em Estoque" required>
+                    </div>
+                    <button class="btn btn-dark" onclick="validaBotao()" type="submit" id="enviar">Cadastrar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/validacao.js"></script>
+    <script src="js/validaBotao.js"></script>
+
+
+</body>
+
+</html>
